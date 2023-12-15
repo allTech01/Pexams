@@ -10,7 +10,18 @@
     }
     
     h2{
-      pointer:cursor;
+      cursor: pointer;
+      background-color: green;
+      padding: 10px 20px;
+      width: 100px;
+      color: white;
+      border-radius: 50px;
+      border: none;
+      outline: none;
+    }
+    
+    h2:active{
+      opacity: .7;
     }
   </style>
   <title>Toggle Content</title>
@@ -398,21 +409,23 @@ if __name__ == "__main__":
     print(neural_network.think(user_inputs))</pre></pre></pre>
   </div>
 
-  <h2>Section 2</h2>
+  <h2>STQA</h2>
   <div class="content" id="section2Content">
     <p>This is the content of section 2.</p>
   </div>
 
-  <h2>Section 3</h2>
+  <h2>GP</h2>
   <div class="content" id="section3Content">
     <p>This is the content of section 3.</p>
   </div>
   
-  <h2>Section 4</h2>
+  <h2>INS</h2>
   <div class="content" id="section4Content">
     <p>This is the content of section 3.</p>
   </div>
-
+  
+  <p>Best of luck 🤞</p>
+  
   <script>
     function toggleContent(sectionId) {
       var content = document.getElementById(sectionId);
