@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .content {
+      display: none;
+      margin: 10px;
+    }
+    
+    h2{
+      pointer:cursor;
+    }
+  </style>
+  <title>Toggle Content</title>
+</head>
+<body>
+
+  <h2>AI</h2>
+  <div class="content" id="section1Content">
 <h1 style="text-align: center;"><u><b><span style="font-size: medium;">AI-Practical</span></b></u></h1><div><u><b><span style="font-size: medium;"><br /></span></b></u></div><p>Prac1</p><p>A)</p><p><span face="&quot;Courier New&quot;, Courier, monospace, arial, sans-serif" style="background-color: white; font-size: 14px;">dict_gn=dict(</span></p><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;">Arad=dict(Timisoara=118,Zerind=75,Sibiu=140),
 Bucharest=dict(Fagaras=211,Urziceni=85,Giurgiu=90,Pitesti=101),
 Craiova=dict(Drobeta=120,Pitesti=138,Rimnicu=146),
@@ -375,3 +396,50 @@ if __name__ == "__main__":
     print("New Output data:")
     user_inputs = np.array([user_input_one, user_input_two, user_input_three])
     print(neural_network.think(user_inputs))</pre></pre></pre>
+  </div>
+
+  <h2>Section 2</h2>
+  <div class="content" id="section2Content">
+    <p>This is the content of section 2.</p>
+  </div>
+
+  <h2>Section 3</h2>
+  <div class="content" id="section3Content">
+    <p>This is the content of section 3.</p>
+  </div>
+  
+  <h2>Section 4</h2>
+  <div class="content" id="section4Content">
+    <p>This is the content of section 3.</p>
+  </div>
+
+  <script>
+    function toggleContent(sectionId) {
+      var content = document.getElementById(sectionId);
+      if (content.style.display === "none") {
+        content.style.display = "block";
+      } else {
+        content.style.display = "none";
+      }
+    }
+    
+    // Attach click event listeners
+    document.getElementById("section1Content").previousElementSibling.addEventListener("click", function() {
+      toggleContent("section1Content");
+    });
+    
+    document.getElementById("section2Content").previousElementSibling.addEventListener("click", function() {
+      toggleContent("section2Content");
+    });
+    
+    document.getElementById("section3Content").previousElementSibling.addEventListener("click", function() {
+      toggleContent("section3Content");
+    });
+    
+    document.getElementById("section4Content").previousElementSibling.addEventListener("click", function() {
+      toggleContent("section4Content");
+    });
+  </script>
+
+</body>
+</html>
