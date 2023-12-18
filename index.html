@@ -1,698 +1,987 @@
-<h1 style="text-align: center;"><u><b><span style="font-size: medium;">AI-Practical</span></b></u></h1><h1 style="text-align: center;"><div style="font-size: medium; text-align: start;"><u><b><br /></b></u></div><p style="font-size: medium; text-align: start;">Prac1</p><p style="font-size: medium; text-align: start;">A)</p><p style="font-size: medium; text-align: start;"><span face="&quot;Courier New&quot;, Courier, monospace, arial, sans-serif" style="background-color: white; font-size: 14px;">dict_gn=dict(</span></p><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; text-wrap: wrap; user-select: text;">Arad=dict(Timisoara=118,Zerind=75,Sibiu=140),
-Bucharest=dict(Fagaras=211,Urziceni=85,Giurgiu=90,Pitesti=101),
-Craiova=dict(Drobeta=120,Pitesti=138,Rimnicu=146),
-Drobeta=dict(Mehadia=75,Craiova=120),
-Eforie=dict(Hirsova=86),
-Fagaras=dict(Sibiu=99,Bucharest=211),
-Giurgiu=dict(Bucharest=90),
-Hirsova=dict(Eforie=86,Urziceni=98),
-Iasi=dict(Neamt=87,Vaslui=92),
-Lugoj=dict(Mehadia=70,Timisoara=111),
-Mehadia=dict(Lugoj=70,Drobeta=75),
-Neamt=dict(Iasi=87),
-Oradea=dict(Zerind=71,Sibiu=151),
-Pitesti=dict(Rimnicu=97,Bucharest=101,Craiova=138),
-Rimnicu=dict(Sibiu=80,Pitesti=97,Craiova=146),
-Sibiu=dict(Fagaras=99,Rimnicu=80,Arad=140,Oradea=151),
-Timisoara=dict(Lugoj=111,Arad=118),
-Urziceni=dict(Bucharest=85,Hirsova=98,Vaslui=142),
-Vaslui=dict(Iasi=92,Urziceni=142),
-Zerind=dict(Oradea=71,Arad=75)
-)
-import queue as Q
-start='Arad'
-goal='Bucharest'
-result=''
-
-def BFS(city, cityq, visitedq):
-    global result
-    if city==start:
-        result=result+' '+city
-    for eachcity in dict_gn[city].keys():
-        if eachcity==goal:
-            result=result+' '+eachcity
-            return
-        if eachcity not in cityq.queue and eachcity not in visitedq.queue:
-            cityq.put(eachcity)
-            result=result+' '+eachcity
-    visitedq.put(city)
-    BFS(cityq.get(),cityq,visitedq)
-
-def main():
-    cityq=Q.Queue()
-    visitedq=Q.Queue()
-    BFS(start, cityq, visitedq)
-    print("BFS Traversal from ",start," to ",goal," is: ")
-    print(result)
-    
-main()
-
-"""
-OUTPUT:
-BFS Traversal from  Arad  to  Bucharest  is: 
- Arad Timisoara Zerind Sibiu Lugoj Oradea Fagaras Rimnicu Mehadia Bucharest
-"""</pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; text-wrap: wrap; user-select: text;">B)</pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; text-wrap: wrap; user-select: text;"><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;">dict_gn=dict(
-Arad=dict(Zerind=75,Timisoara=118,Sibiu=140),
-Bucharest=dict(Urziceni=85,Giurgiu=90,Pitesti=101,Fagaras=211),
-Craiova=dict(Drobeta=120,Pitesti=138,Rimnicu=146),
-Drobeta=dict(Mehadia=75,Craiova=120),
-Eforie=dict(Hirsova=86),
-Fagaras=dict(Sibiu=99,Bucharest=211),
-Giurgiu=dict(Bucharest=90),
-Hirsova=dict(Eforie=86,Urziceni=98),
-Iasi=dict(Neamt=87,Vaslui=92),
-Lugoj=dict(Mehadia=70,Timisoara=111),
-Mehadia=dict(Lugoj=70,Drobeta=75),
-Neamt=dict(Iasi=87),
-Oradea=dict(Zerind=71,Sibiu=151),
-Pitesti=dict(Rimnicu=97,Bucharest=101,Craiova=138),
-Rimnicu=dict(Sibiu=80,Pitesti=97,Craiova=146),
-Sibiu=dict(Rimnicu=80,Fagaras=99,Arad=140,Oradea=151),
-Timisoara=dict(Lugoj=111,Arad=118),
-Urziceni=dict(Bucharest=85,Hirsova=98,Vaslui=142),
-Vaslui=dict(Iasi=92,Urziceni=142),
-Zerind=dict(Oradea=71,Arad=75)
-)
-import queue as Q
-
-start='Arad'
-goal='Bucharest'
-result=''
-
-def DLS(city, visitedstack, startlimit, endlimit):
-    global result
-    found=0
-    result=result+city+' '
-    visitedstack.append(city)
-    if city==goal:
-        return 1
-    if startlimit==endlimit:
-        return 0
-    for eachcity in dict_gn[city].keys():
-        if eachcity not in visitedstack:
-            found=DLS(eachcity, visitedstack, startlimit+1, endlimit)
-            if found:
-                return found
-
-def IDDFS(city, visitedstack, endlimit):
-    global result
-    for i in range(0, endlimit):
-        print("Searching at Limit: ",i)
-        found=DLS(city, visitedstack, 0, i)
-        if found:
-            print("Found")
-            break
-        else:
-            print("Not Found! ")
-            print(result)
-            print("-----")
-            result=' '
-            visitedstack=[]
-
-def main():
-    visitedstack=[]
-    IDDFS(start, visitedstack, 9)
-    print("IDDFS Traversal from ",start," to ", goal," is: ")
-    print(result)
-
-
-main() </pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><b>Prac2</b></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><b>A)</b></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><b><br /></b></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;">#AIM: Implement A* search.
-dict_hn={'Arad':336,'Bucharest':0,'Craiova':160,'Drobeta':242,'Eforie':161,
-         'Fagaras':176,'Giurgiu':77,'Hirsova':151,'Iasi':226,'Lugoj':244,
-         'Mehadia':241,'Neamt':234,'Oradea':380,'Pitesti':100,'Rimnicu':193,
-         'Sibiu':253,'Timisoara':329,'Urziceni':80,'Vaslui':199,'Zerind':374}
-
-dict_gn=dict(
-Arad=dict(Sibiu=140,Timisoara=118,Zerind=75),
-Bucharest=dict(Urziceni=85,Giurgiu=90,Pitesti=101,Fagaras=211),
-Craiova=dict(Drobeta=120,Pitesti=138,Rimnicu=146),
-Drobeta=dict(Mehadia=75,Craiova=120),
-Eforie=dict(Hirsova=86),
-Fagaras=dict(Sibiu=99,Bucharest=211),
-Giurgiu=dict(Bucharest=90),
-Hirsova=dict(Eforie=86,Urziceni=98),
-Iasi=dict(Neamt=87,Vaslui=92),
-Lugoj=dict(Mehadia=70,Timisoara=111),
-Mehadia=dict(Lugoj=70,Drobeta=75),
-Neamt=dict(Iasi=87),
-Oradea=dict(Zerind=71,Sibiu=151),
-Pitesti=dict(Rimnicu=97,Bucharest=101,Craiova=138),
-Rimnicu=dict(Sibiu=80,Pitesti=97,Craiova=146),
-Sibiu=dict(Rimnicu=80,Fagaras=99,Arad=140,Oradea=151),
-Timisoara=dict(Lugoj=111,Arad=118),
-Urziceni=dict(Bucharest=85,Hirsova=98,Vaslui=142),
-Vaslui=dict(Iasi=92,Urziceni=142),
-Zerind=dict(Oradea=71,Arad=75)
-)
-import queue as Q
-
-start='Arad'
-goal='Bucharest'
-result=''
-
-def get_fn(citystr):
-    cities=citystr.split(" , ")
-    hn=gn=0
-    for ctr in range(0, len(cities)-1):
-        gn=gn+dict_gn[cities[ctr]][cities[ctr+1]]
-    hn=dict_hn[cities[len(cities)-1]]
-    return(hn+gn)
-
-def expand(cityq):
-    global result
-    tot, citystr, thiscity=cityq.get()
-    if thiscity==goal:
-        result=citystr+" : : "+str(tot)
-        return
-    for cty in dict_gn[thiscity]:
-        cityq.put((get_fn(citystr+" , "+cty), citystr+" , "+cty, cty))
-    expand(cityq)
-
-def main():
-    cityq=Q.PriorityQueue() #ascending order 
-    thiscity=start
-    cityq.put((get_fn(start),start,thiscity))
-    expand(cityq)
-    print("The A* path with the total is: ")
-    print(result)
-
-main()</pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><b><br /></b></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><b>B)</b></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;">#AIM: RBFS(Recursive Breadth First Search)
-dict_hn={'Arad':336,'Bucharest':0,'Craiova':160,'Drobeta':242,'Eforie':161,
-         'Fagaras':176,'Giurgiu':77,'Hirsova':151,'Iasi':226,'Lugoj':244,
-         'Mehadia':241,'Neamt':234,'Oradea':380,'Pitesti':100,'Rimnicu':193,
-         'Sibiu':253,'Timisoara':329,'Urziceni':80,'Vaslui':199,'Zerind':374}
-
-dict_gn=dict(
-Arad=dict(Zerind=75,Timisoara=118,Sibiu=140),
-Bucharest=dict(Urziceni=85,Giurgiu=90,Pitesti=101,Fagaras=211),
-Craiova=dict(Drobeta=120,Pitesti=138,Rimnicu=146),
-Drobeta=dict(Mehadia=75,Craiova=120),
-Eforie=dict(Hirsova=86),
-Fagaras=dict(Sibiu=99,Bucharest=211),
-Giurgiu=dict(Bucharest=90),
-Hirsova=dict(Eforie=86,Urziceni=98),
-Iasi=dict(Neamt=87,Vaslui=92),
-Lugoj=dict(Mehadia=70,Timisoara=111),
-Mehadia=dict(Lugoj=70,Drobeta=75),
-Neamt=dict(Iasi=87),
-Oradea=dict(Zerind=71,Sibiu=151),
-Pitesti=dict(Rimnicu=97,Bucharest=101,Craiova=138),
-Rimnicu=dict(Sibiu=80,Pitesti=97,Craiova=146),
-Sibiu=dict(Rimnicu=80,Fagaras=99,Arad=140,Oradea=151),
-Timisoara=dict(Lugoj=111,Arad=118),
-Urziceni=dict(Bucharest=85,Hirsova=98,Vaslui=142),
-Vaslui=dict(Iasi=92,Urziceni=142),
-Zerind=dict(Oradea=71,Arad=75)
-)
-import queue as Q
-start='Arad'
-goal='Bucharest'
-result=''
-def get_fn(citystr):
-    cities=citystr.split(',')
-    hn=gn=0
-    for ctr in range(0,len(cities)-1):
-        gn=gn+dict_gn[cities[ctr]][cities[ctr+1]]
-    hn=dict_hn[cities[len(cities)-1]]
-    return(hn+gn)
-def printout(cityq):
-    for i in range(0,cityq.qsize()):
-        print(cityq.queue[i])
-def expand(cityq):
-    global result
-    tot,citystr,thiscity=cityq.get()
-    nexttot=999
-    if not cityq.empty():
-        nexttot,nextcitystr,nextthiscity=cityq.queue[0]
-    if thiscity==goal and tot&lt;nexttot:
-        result=citystr+'::'+str(tot)
-        return
-    print("Expanded city------------------------------",thiscity)
-    print("Second best f(n)------------------------------",nexttot)
-    tempq=Q.PriorityQueue()
-    for cty in dict_gn[thiscity]:
-            tempq.put((get_fn(citystr+','+cty),citystr+','+cty,cty))
-    for ctr in range(1,3):
-        ctrtot,ctrcitystr,ctrthiscity=tempq.get()
-        if ctrtot&lt;nexttot:
-            cityq.put((ctrtot,ctrcitystr,ctrthiscity))
-        else:
-            cityq.put((ctrtot,citystr,thiscity))
-            break
-    printout(cityq)
-    expand(cityq)
-def main():
-    cityq=Q.PriorityQueue()
-    thiscity=start
-    cityq.put((999,"NA","NA"))
-    cityq.put((get_fn(start),start,thiscity))
-    expand(cityq)
-    print(result)
-main()</pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><b>Prac3</b></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><b><br /></b></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;">#numpy and pandas initialization
-import numpy as np
-import pandas as pd
-from sklearn.preprocessing import LabelEncoder
-from sklearn import tree
-import matplotlib.pyplot as plt
-import graphviz
-from sklearn.metrics import accuracy_score
-
-
-
-#Loading the PlayTennis data
-PlayTennis = pd.read_csv("PlayTennis.csv")
-print(PlayTennis)
-#Label Encoding is a technique that is used to convert categorical
-#columns into numerical ones
-
-Le = LabelEncoder()
-
-PlayTennis['outlook'] = Le.fit_transform(PlayTennis['outlook'])
-PlayTennis['temp'] = Le.fit_transform(PlayTennis['temp'])
-PlayTennis['humidity'] = Le.fit_transform(PlayTennis['humidity'])
-PlayTennis['windy'] = Le.fit_transform(PlayTennis['windy'])
-PlayTennis['play'] = Le.fit_transform(PlayTennis['play'])
-print(PlayTennis)
-
-"""Lets split the training data and its coresponding prediction values.
-y - holds all the decisions.
-X - holds the training data.
-In pandas axis = 0 refers to horizontal axis or rows and axis = 1 refers to vertical axis or columns.
-The drop() method removes the specified row or column
-"""
-y = PlayTennis['play']
-X = PlayTennis.drop(['play'],axis=1)
-
-# Fitting the model
-#fit() method will build a decision tree classifier from given training
-#set (X, y)
-clf = tree.DecisionTreeClassifier(criterion = 'entropy')
-clf = clf.fit(X, y)
-
-# We can visualize the tree using tree.plot_tree
-tree.plot_tree(clf,feature_names=['outlook','temp','humidity','windy'],filled=True,class_names=['no','yes'])
-plt.show()
-
-#Graph visualization is a way of representing structural information as diagrams of abstract graphs and networks.
-#This function generates a GraphViz representation of the decision tree
-
-dot_data = tree.export_graphviz(clf, out_file=None) 
-graph = graphviz.Source(dot_data) 
-print(graph)
-
-'''given a trained model, predict the label of a new set of data.
-This method accepts one argument, the new data X_new
-(e.g. model. predict(X_new) ), and returns the learned label for each object
-in the array.'''
-# The predictions are stored in X_pred
-X_pred = clf.predict(X)
-# verifying if the model has predicted it all right.
-print(X_pred == y)
-
-def prediction(X_test,clf_object):
-      y_pred=clf_object.predict(X_test)
-      print("Predicted Values : ")
-      print(y_pred)
-      return y_pred
-
-def cal_accuracy(y_test,y_pred):
-      print("Accuracy : ",accuracy_score(y_test,y_pred)*100)
-
-
-y_pred_entropy=prediction(X,clf)
-cal_accuracy(y,y_pred_entropy)</pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><b>Prac4</b></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><b><br /></b></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;">import numpy as np
-
-class NeuralNetwork():
-    def __init__(self):
-        np.random.seed()
-        # a numerical value that generates a new set or repeats pseudo-random numbers.
-        #The seed is a starting point for a sequence of pseudorandom numbers.
-        self.synaptic_weights = 2 * np.random.random((3, 1)) - 1
-        #weights represent the strength of connections between neurons in different layers of a neural network.
-        #(3, 1) indicates that you have 3 input neurons and 1 output neuron.
-        #The process of adjusting these weights to minimize the difference between
-        #predicted and actual outputs is known as training or learning.
-    
-    def sigmoid(self, x):
-        return 1 / (1 + np.exp(-x))
-    
-    def sigmoid_derivative(self, x):
-        return x * (1 - x)
-    
-    def train(self, training_inputs, training_outputs, training_iterations):
-        for iteration in range(training_iterations):
-            output = self.think(training_inputs)
-            error = training_outputs - output
-            adjustments = np.dot(training_inputs.T, error * self.sigmoid_derivative(output))
-            self.synaptic_weights += adjustments
-    
-    def think(self, inputs):
-        inputs = inputs.astype(float)
-        output = self.sigmoid(np.dot(inputs, self.synaptic_weights))
-        return output
-
-if __name__ == "__main__":
-    #initializing the neuron class
-    neural_network = NeuralNetwork()
-    print("Beginning Randomly Generated Weights:")
-    print(neural_network.synaptic_weights)
-    ##training data consisting of 4 examples--3 input values and 1 output
-    training_inputs = np.array([[0, 0, 1],
-                                [1, 1, 1],
-                                [1, 0, 1],
-                                [0, 1, 1]])
-    training_outputs = np.array([[0, 1, 1, 0]]).T
-    ##training taking place    
-    neural_network.train(training_inputs, training_outputs, 15000)
-    print("Ending Weights After Training:")
-    print(neural_network.synaptic_weights)
-
-    user_input_one = float(input("User Input One: "))
-    user_input_two = float(input("User Input Two: "))
-    user_input_three = float(input("User Input Three: "))
-    
-    print("Considering New Situation:", user_input_one, user_input_two, user_input_three)
-    print("New Output data:")
-    user_inputs = np.array([user_input_one, user_input_two, user_input_three])
-    print(neural_network.think(user_inputs))</pre></pre></pre></h1><h1 style="text-align: center;"><b style="background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; text-align: left;"><br /></b></h1><h1 style="text-align: center;"><b style="background-color: white; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; text-align: left;">Prac5</b></h1><h1 style="text-align: center;"><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; background-color: white; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-align: start; user-select: text;"><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><b><br /></b></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; user-select: text;"><span style="font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif;"><span style="font-size: 14px; text-wrap: wrap;">#pip install statsmodels==0.10.2
-#pip install xgboost
-
-from warnings import filterwarnings
-filterwarnings("ignore")
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import statsmodels.api as sm
-import statsmodels.formula.api as smf
-from sklearn import svm, datasets
-from sklearn.linear_model import LogisticRegression,LogisticRegressionCV
-from sklearn.metrics import mean_squared_error,r2_score
-from sklearn.model_selection import cross_val_score,train_test_split,GridSearchCV
-from sklearn.decomposition import PCA
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.preprocessing import scale
-from sklearn import model_selection
-from sklearn.metrics import roc_auc_score,roc_curve
-from sklearn import preprocessing
-from sklearn.metrics import classification_report
-from sklearn.metrics import confusion_matrix,accuracy_score
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier,BaseEnsemble,GradientBoostingClassifier
-from sklearn.svm import SVC,LinearSVC
-import time
-from matplotlib.colors import ListedColormap
-#from xgboost import XGBRegressor
-#from skompiler import skompile
-#from lightgbm import LGBMRegressor
-
-df = pd.read_csv('diabetes.csv')
-print(df.head())
-print(df.describe())
-print(df.isnull().values.any())
-print(df.groupby('Outcome').size())
-print(df.groupby("Outcome").mean())
-
-# all data except labels
-x=df.drop(columns="Outcome",axis=1)
-y=df["Outcome"]
-
-sns.countplot(df['Outcome'],label="Count")
-plt.show()
-
-x_train=x.iloc[:600]
-x_test=x.iloc[600:]
-y_train=y[:600]
-y_test=y[600:]
-print('x_train shape:',x_train.shape)
-print('x_test shape:',x_test.shape)
-print('y_train shape:',y_train.shape)
-print('y_test shape:',y_test.shape)
-
-support_vector_classifier=SVC(kernel='linear').fit(x_train,y_train)
-print(support_vector_classifier)
-
-print(support_vector_classifier.C)
-
-y_pred=support_vector_classifier.predict(x_test)
-cm=confusion_matrix(y_test,y_pred)
-print(cm)
-
-print('Accuracy is : ',cm[0][0]+cm[1][1]/(cm[0][0]+cm[1][1]+cm[0][1]+cm[1][0]))
-
-print('accuracy score: ',y_test,y_pred)
-
-print(classification_report(y_test,y_pred))
-
-accuracies=cross_val_score(estimator=support_vector_classifier,X=x_train,y=y_train,cv=10)
-print('average accuracy: {:.2f}%'.format(accuracies.mean()*100))
-print('SD: {:.2f}%'.format(accuracies.std()*100))
-
-
-
-svm_tuned=SVC(kernel='linear',C=2).fit(x_train,y_train)
-print(svm_tuned)
-
-y_pred=svm_tuned.predict(x_test)
-cm=confusion_matrix(y_test,y_pred)
-
-print(cm)
-
-print('Accuracy is : ',cm[0][0]+cm[1][1]/(cm[0][0]+cm[1][1]+cm[0][1]+cm[1][0]))
-
-print('accuracy score: ',y_test,y_pred)
-
-print(classification_report(y_test,y_pred))</span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><b>Prac6</b></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><b><br /></b></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; user-select: text;"><span face="Courier New, Courier, monospace, arial, sans-serif"><span style="font-size: 14px; text-wrap: wrap;">import pandas
-from sklearn import model_selection
-from sklearn.ensemble import AdaBoostClassifier
-url = "diabetes-1.csv"
-names = ['Pregnancies','Glucose','BloodPressure','SkinThickness','Insulin','BMI','DiabetesPedigreeFunction','Age','Outcome'
-]
-dataframe = pandas.read_csv(url, names=names)
-array = dataframe.values
-X = array[:,0:8]     
-Y = array[:,8]      
-seed = 2             
-num_trees = 20      
-model = AdaBoostClassifier(n_estimators=num_trees, random_state=seed)
-
-
-results = model_selection.cross_val_score(model,X, Y)
-print(results)
-print(results.std())
-print(results.mean())</span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><b><br /></b></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><b>Prac7</b></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; font-family: &quot;Courier New&quot;, Courier, monospace, arial, sans-serif; font-size: 14px; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; text-wrap: wrap; user-select: text;"><br /></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; user-select: text;"><span face="Courier New, Courier, monospace, arial, sans-serif"><span style="font-size: 14px; text-wrap: wrap;">import pandas as pd
-import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split      #new
-from sklearn.naive_bayes import MultinomialNB,CategoricalNB,GaussianNB   #new
-from sklearn.metrics import accuracy_score
-import seaborn as sns
-from sklearn.preprocessing import LabelEncoder
-
-
-df=pd.read_csv('disease.csv')
-print(df.head(11))
-print(df.tail())
-print(df.info())
-le=LabelEncoder()
-df['Sore Throat']=le.fit_transform(df['Sore Throat'])
-df['Fever']=le.fit_transform(df['Fever'])
-df['Swollen Glands']=le.fit_transform(df['Swollen Glands'])
-df['Congestion']=le.fit_transform(df['Congestion'])
-df['Headache']=le.fit_transform(df['Headache'])
-df['Diagnosis']=le.fit_transform(df['Diagnosis'])
-
-fig,ax=plt.subplots(figsize=(6,6))
-sns.countplot(x=df['Sore Throat'],data=df)
-plt.title('category wise count of sore throat')
-plt.xlabel('category')
-plt.ylabel('count')
-plt.show()
-
-fig,ax=plt.subplots(figsize=(6,6))
-sns.countplot(x=df['Fever'],data=df)
-plt.title('category wise count of Fever')
-plt.xlabel('category')
-plt.ylabel('count')
-plt.show()
-
-fig,ax=plt.subplots(figsize=(6,6))
-sns.countplot(x=df['Swollen Glands'],data=df)
-plt.title('category wise count of Swollen Glands')
-plt.xlabel('category')
-plt.ylabel('count')
-plt.show()
-
-
-fig,ax=plt.subplots(figsize=(6,6))
-sns.countplot(x=df['Congestion'],data=df)
-plt.title('category wise count of Congestion')
-plt.xlabel('category')
-plt.ylabel('count')
-plt.show()
-
-fig,ax=plt.subplots(figsize=(6,6))
-sns.countplot(x=df['Headache'],data=df)
-plt.title('category wise count of Headache')
-plt.xlabel('category')
-plt.ylabel('count')
-plt.show()
-
-
-fig,ax=plt.subplots(figsize=(6,6))
-sns.countplot(x=df['Diagnosis'],data=df)
-plt.title('category wise count of Diagnosis')
-plt.xlabel('category')
-plt.ylabel('count')
-plt.show()
-
-
-X=df.drop('Diagnosis',axis=1)
-y=df['Diagnosis']
-classifier=MultinomialNB()
-classifier.fit(X,y)
-
-classifier=CategoricalNB()
-classifier.fit(X,y)
-
-classifier=GaussianNB()
-classifier.fit(X,y)
-
-from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import classification_report,accuracy_score,confusion_matrix,precision_score,recall_score,f1_score
-
-X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2)
-classifier=MultinomialNB()
-classifier.fit(X_train,y_train)
-y_pred=classifier.predict(X_test)
-print('Confusion Matrix ',confusion_matrix(y_test,y_pred))
-print('Accuracy ',accuracy_score(y_test,y_pred))
-print('Precision',precision_score(y_test,y_pred))
-print('F1 Score',f1_score(y_test,y_pred))
-print('Recall',recall_score(y_test,y_pred))
-print('classification matrix',classification_report(y_test,y_pred))</span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; user-select: text;"><span face="Courier New, Courier, monospace, arial, sans-serif"><span style="font-size: 14px; text-wrap: wrap;"><br /></span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; user-select: text;"><span face="Courier New, Courier, monospace, arial, sans-serif"><span style="font-size: 14px; text-wrap: wrap;"><br /></span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; user-select: text;"><span face="Courier New, Courier, monospace, arial, sans-serif"><span style="font-size: 14px; text-wrap: wrap;"><br /></span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; user-select: text;"><span face="Courier New, Courier, monospace, arial, sans-serif"><span style="font-size: 14px; text-wrap: wrap;"><br /></span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; user-select: text;"><span face="Courier New, Courier, monospace, arial, sans-serif"><span style="font-size: 14px; text-wrap: wrap;"><b>Prac8</b></span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; user-select: text;"><span face="Courier New, Courier, monospace, arial, sans-serif"><span style="font-size: 14px; text-wrap: wrap;"><b><br /></b></span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; user-select: text;"><span face="Courier New, Courier, monospace, arial, sans-serif"><span style="font-size: 14px; text-wrap: wrap;">import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-plt.style.use('ggplot')
-df=pd.read_csv('diabetes.csv')
-
-print(df.head())
-print(df.shape)
-print(df.dtypes)
-x=df.drop('Outcome',axis=1).values
-y=df['Outcome'].values
-
-from sklearn.model_selection import train_test_split
-x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.4,random_state=0)
-
-print(x_train.shape)
-print(x_test.shape) 
-
-
-from sklearn.neighbors import KNeighborsClassifier
-neighbors=np.arange(1,9)
-train_accuracy=np.empty(len(neighbors))
-test_accuracy=np.empty(len(neighbors))
-
-for i,k in enumerate(neighbors):
-    knn=KNeighborsClassifier(n_neighbors=k)
-    knn.fit(x_train,y_train)
-    train_accuracy[i]=knn.score(x_train,y_train)
-    test_accuracy[i]=knn.score(x_test,y_test)
-
-plt.title('KNN no of neighbors:')
-plt.plot(neighbors,test_accuracy,label='Testing Accuracy')
-plt.plot(neighbors,train_accuracy,label='Training Accuracy')
-plt.legend()
-plt.xlabel('no of neighbors')
-plt.ylabel('accuracy')
-plt.show()
-
-knn=KNeighborsClassifier(n_neighbors=7)
-
-knn.fit(x_train,y_train)
-knn.score(x_test,y_test)
-
-from sklearn.metrics import confusion_matrix
-y_pred=knn.predict(x_test)
-confusion_matrix(y_test,y_pred)
-
-from sklearn.metrics import classification_report
-print(classification_report(y_test,y_pred))
-
-y_pred_proba=knn.predict_proba(x_test)[:,1]
-
-from sklearn.metrics import roc_curve
-
-fpr,tpr,thresholds=roc_curve(y_test,y_pred_proba)
-
-plt.plot([0,1],[0,1],'k--')
-plt.plot(fpr,tpr,label='Knn')
-plt.xlabel('fpr')
-plt.ylabel('tpr')
-plt.title('Knn(n_neighbors=7) ROC curve')
-plt.show()
-
-from sklearn.metrics import roc_auc_score
-roc_auc_score(y_test,y_pred_proba)
-
-
-from sklearn.model_selection import GridSearchCV
-param_grid={'n_neighbors':np.arange(1,50)}
-
-knn=KNeighborsClassifier()
-knn_cv=GridSearchCV(knn,param_grid,cv=5)
-
-knn_cv.fit(x,y)
-print(knn_cv.best_score_)
-print(knn_cv.best_params_)</span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; user-select: text;"><span face="Courier New, Courier, monospace, arial, sans-serif"><span style="font-size: 14px; text-wrap: wrap;"><br /></span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; user-select: text;"><span face="Courier New, Courier, monospace, arial, sans-serif"><span style="font-size: 14px; text-wrap: wrap;"><br /></span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; user-select: text;"><span face="Courier New, Courier, monospace, arial, sans-serif"><span style="font-size: 14px; text-wrap: wrap;"><br /></span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; user-select: text;"><span face="Courier New, Courier, monospace, arial, sans-serif"><span style="font-size: 14px; text-wrap: wrap;"><br /></span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; user-select: text;"><span face="Courier New, Courier, monospace, arial, sans-serif"><span style="font-size: 14px; text-wrap: wrap;"><b>Prac9</b></span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; user-select: text;"><span face="Courier New, Courier, monospace, arial, sans-serif"><span style="font-size: 14px; text-wrap: wrap;"><b><br /></b></span></span></pre><pre class="ndfHFb-c4YZDc-fmcmS-DARUcf" style="-webkit-tap-highlight-color: transparent; margin-bottom: 0px; margin-top: 0px; overflow-wrap: break-word; user-select: text;"><span face="Courier New, Courier, monospace, arial, sans-serif"><span style="font-size: 14px; text-wrap: wrap;">#pip install apyori
-#pip install plotly
-import numpy as np
-import pandas as pd
-from matplotlib import *
-import plotly.graph_objects as go
-import plotly.express as px
-from apyori import apriori
-
-df=pd.read_csv('Groceries_dataset.csv')
-print(df.head())
-print(df.isnull().any())
-all_products=df['itemDescription'].unique()
-print('Total products: {}'.format(len(all_products)))
-def distribution_plot(x,y,name=None,xaxis=None,yaxis=None):
-    fig=go.Figure(go.Bar(x=x,y=y))
-    fig.update_layout(title_text=name,xaxis_title=xaxis,yaxis_title=yaxis)
-    print(fig)
-    fig.show()
-x=df['itemDescription'].value_counts()
-x=x.sort_values(ascending=False)
-x=x[:10]
-print(distribution_plot(x=x.index,y=x.values,yaxis='Count',xaxis='Products'))
-one_hot=pd.get_dummies(df['itemDescription'])
-df.drop('itemDescription',inplace=True,axis=1)
-df=df.join(one_hot)
-print(df.head())
-records=df.groupby(['Member_number','Date'])[all_products[:]].apply(sum)
-records=records.reset_index()[all_products]
-def get_Pnames(x):
-    for product in all_products:
-        if x[product]&gt;0:
-            x[product]=product
-    return x
-records=records.apply(get_Pnames,axis=1)
-print(records.head())
-print('total transactions: {}'.format(len(records)))
-x=records.values
-x=[sub[~(sub==0)].tolist() for sub in x if sub[sub!=0].tolist()]
-transaction=x
-transaction[0:10]
-rules=apriori(transaction,min_support=0.00030,min_confidence=0.05,min_lift=3,min_length=2,target='rules')
-association_results=list(rules)
-for item in association_results:
-    pair=item[0]
-    items=[x for x in pair]
-    print('Rule: '+items[0]+"-&gt;"+items[1])
-    print('Support: '+str(item[1]))
-    print('Confidence: ',str(item[2][0][2]))
-    print('Lift: ',str(item[2][0][3]))
-    print('------')</span></span></pre></pre></h1>
+<p></p><p class="MsoNoSpacing"><b><span style="font-size: 16.0pt;">Practical 1 - Cipher<o:p></o:p></span></b></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 12.0pt;">1.Caesar cipher:<o:p></o:p></span></b></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">import java.util.Scanner;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">public class Caesar {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public static String encrypt(String pt,int shift){<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>StringBuilder ct = new StringBuilder();<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int i =0;i&lt;pt.length();i++) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>char ch = pt.charAt(i);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(Character.isLetter(ch)) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>char b =
+Character.isUpperCase(ch)?'A':'a';<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ch=
+(char)(((ch-b+shift)%26)+b);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ct.append(ch);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return ct.toString();<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public static String decrypt(String ct,int shift) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return encrypt(ct,26-shift);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public static void main(String[] args) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Scanner sc = new Scanner(System.in);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Enter msg: ");<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>String pt = sc.nextLine();<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Enter shift:
+");<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int key = Integer.valueOf(sc.nextLine());<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Plain: "+pt);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Shift: "+key);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>String eMsg = encrypt(pt,key);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Enc msg:
+"+eMsg);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>String dMsg = decrypt(eMsg,key);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Dec msg:
+"+dMsg);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 12.0pt;">2.Monoalphabetic
+cipher:<o:p></o:p></span></b></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing">import java.util.Scanner;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing">public class MonoCipher {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
+static char p[]=
+{'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
+static char ch[]=
+{'P','Q','R','S','T','U','V','W','X','Y','Z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O'};<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
+static String encrypt(String s) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>char
+c[]=new char[(s.length())];<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
+i=0;i&lt;s.length();i++) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
+j =0;j&lt;26;j++) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(p[j]==s.charAt(i))
+{<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 5;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>c[i]=ch[j];<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 5;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>break;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return
+(new String(c));<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
+static String decrypt(String s) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>char
+p1[]=new char[(s.length())];<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
+i=0;i&lt;s.length();i++) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
+j =0;j&lt;26;j++) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(ch[j]==s.charAt(i))
+{<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 5;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>p1[i]=p[j];<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 5;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>break;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return
+(new String(p1));<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
+static void main(String[] args) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Scanner
+sc=new Scanner(System.in);<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Enter
+msg: ");<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>String
+e = encrypt(sc.next().toUpperCase());<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Enc
+msg: "+e);<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>String
+d = decrypt(e);<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Dec
+msg: "+d);<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>sc.close();<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing">}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 12.0pt;">3. RailFence cipher<o:p></o:p></span></b></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing">public class RailFence {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>public static
+String encrypt(String text, int railCount) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>char[][]
+railMatrix = new char[railCount][text.length()];<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for (int i
+= 0; i &lt; railCount; i++) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for
+(int j = 0; j &lt; text.length(); j++) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>railMatrix[i][j] = '\n';<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>boolean
+directionDown = false;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int row =
+0, col = 0;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for (int i
+= 0; i &lt; text.length(); i++) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if (row
+== 0 || row == railCount - 1) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>directionDown = !directionDown;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>railMatrix[row][col++] = text.charAt(i);<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(directionDown) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>row++;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>} else
+{<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>row--;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>StringBuilder result = new StringBuilder();<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for (int i
+= 0; i &lt; railCount; i++) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for
+(int j = 0; j &lt; text.length(); j++) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(railMatrix[i][j] != '\n') {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>result.append(railMatrix[i][j]);<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return
+result.toString();<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>public static
+String decrypt(String text, int railCount) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>char[][]
+railMatrix = new char[railCount][text.length()];<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for (int i
+= 0; i &lt; railCount; i++) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for
+(int j = 0; j &lt; text.length(); j++) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>railMatrix[i][j] = '\n';<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>boolean
+directionDown = false;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int row =
+0, col = 0;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for (int i
+= 0; i &lt; text.length(); i++) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if (row
+== 0) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>directionDown = true;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>} else
+if (row == railCount - 1) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>directionDown = false;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}</p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>railMatrix[row][col++] = '*';</p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(directionDown) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>row++;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>} else
+{<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>row--;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int index =
+0;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for (int i
+= 0; i &lt; railCount; i++) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for
+(int j = 0; j &lt; text.length(); j++) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(railMatrix[i][j] == '*' &amp;&amp; index &lt; text.length()) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>railMatrix[i][j] = text.charAt(index++);<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><br /></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>StringBuilder result = new StringBuilder();<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>row = 0;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>col = 0;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for (int i
+= 0; i &lt; text.length(); i++) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if (row
+== 0) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>directionDown = true;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>} else
+if (row == railCount - 1) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>directionDown = false;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(railMatrix[row][col] != '*') {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>result.append(railMatrix[row][col++]);<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(directionDown) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>row++;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>} else
+{<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>row--;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return
+result.toString();<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>public static
+void main(String[] args) {<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>String
+plaintext = "ATTACK AT ONCE!";<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int
+railCount = 3;<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>String
+encryptedText = encrypt(plaintext, railCount);<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>System.out.println("Encrypted: " + encryptedText);<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>String
+decryptedText = decrypt(encryptedText, railCount);<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>System.out.println("Decrypted: " + decryptedText);<o:p></o:p></p>
+
+<p class="MsoNoSpacing"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></p>
+
+<p class="MsoNoSpacing">}<span style="font-size: 12.0pt;"><o:p></o:p></span></p><p class="MsoNoSpacing"><br /></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 16.0pt;">Practical 2 - RSA<o:p></o:p></span></b></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 12.0pt;">Python Algorithm:<o:p></o:p></span></b></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">def gcd(a, b):<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>while b != 0:<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>a, b = b, a % b<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>return a<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">def mod_inverse(a, m):<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>for x in range(1, m):<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if (a * x) % m == 1:<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return x<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>return None<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">def rsa_key_generation(p,
+q):<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>n = p * q<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>phi = (p - 1) * (q - 1)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>e = 3<span style="mso-spacerun: yes;">&nbsp;
+</span><o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>if gcd(e, phi) == 1:<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>d = mod_inverse(e, phi)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if d is not None:<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public_key = (e, n)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>private_key = (d, n)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return public_key, private_key<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>return None<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">def rsa_encrypt(plaintext,
+public_key):<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>e, n = public_key<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>encrypted_msg = pow(plaintext, e, n)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>return encrypted_msg<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">def
+rsa_decrypt(ciphertext, private_key):<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>d, n = private_key<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>decrypted_msg = pow(ciphertext, d, n)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>return decrypted_msg<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">p = 3<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">q = 11<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">public_key, private_key =
+rsa_key_generation(p, q)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">message = <o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">cipher_text =
+rsa_encrypt(message, public_key)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">print("Encrypted:",
+cipher_text)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">decrypted_message =
+rsa_decrypt(cipher_text, private_key)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">print("Decrypted:",
+decrypted_message)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 12.0pt;">Java Algorithm:<o:p></o:p></span></b></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">public class RSA{<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>public static void main(String[] args) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int p = 3; <o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int q = 11; <o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int n = p * q; <o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int phi = (p - 1) * (q - 1);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int e = 3; <o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int d = modInverse(e, phi);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int message = 9; <o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int encrypted = modPow(message, e, n);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Encrypted:
+" + encrypted);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int decrypted = modPow(encrypted, d,
+n);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Decrypted:
+" + decrypted);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>public static int modPow(int base, int
+exponent, int modulus) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int result = 1;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>base = base % modulus;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>while (exponent &gt; 0) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if (exponent % 2 == 1) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>result = (result * base) %
+modulus;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>exponent = exponent &gt;&gt; 1;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>base = (base * base) % modulus;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return result;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>public static int modInverse(int a, int m)
+{<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int m0 = m;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int y = 0, x = 1;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if (m == 1) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return 0;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>while (a &gt; 1) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int q = a / m;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int t = m;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>m = a % m;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>a = t;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>t = y;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>y = x - q * y;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>x = t;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if (x &lt; 0) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>x += m0;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return x;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 16.0pt;">Practical 3 - HMAC<o:p></o:p></span></b></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 12.0pt;">HMAC SHA-1 Example:<o:p></o:p></span></b></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">import javax.crypto.Mac;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">import
+javax.crypto.spec.SecretKeySpec;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">import
+java.security.InvalidKeyException;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">import
+java.security.NoSuchAlgorithmException;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">import java.util.Base64;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">public class HMAC_SHA1 {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>public static void main(String[] args) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>try {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>String message = "This is a
+secret message";<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>String secretKey =
+"mySecretKey";<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>byte[] secretKeyBytes =
+secretKey.getBytes();<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>byte[] messageBytes =
+message.getBytes();<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Mac hmacSha1 =
+Mac.getInstance("HmacSHA1");<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>SecretKeySpec secretKeySpec = new
+SecretKeySpec(secretKeyBytes, "HmacSHA1");<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>hmacSha1.init(secretKeySpec);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>byte[] hmacBytes =
+hmacSha1.doFinal(messageBytes);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>String hmac =
+Base64.getEncoder().encodeToString(hmacBytes);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Message:
+" + message);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("HMAC-SHA1:
+" + hmac);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>} catch (NoSuchAlgorithmException |
+InvalidKeyException e) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>e.printStackTrace();<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 16.0pt;">Practical 4 – Digital
+Signature<o:p></o:p></span></b></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 12.0pt;">Python code:<o:p></o:p></span></b></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">def gcd(a, b):<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>while b != 0:<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>a, b = b, a % b<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>return a<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">def mod_inverse(a, m):<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>for x in range(1, m):<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if (a * x) % m == 1:<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return x<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>return None<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">def generate_keypair():<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>p = 823<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>q = 953<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>n = p * q<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>phi = (p - 1) * (q - 1)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>e = 313<span style="mso-spacerun: yes;">&nbsp;
+</span><o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print("Encryption key: ",e)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>if gcd(e, phi) == 1:<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>d = mod_inverse(e, phi)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>print("Decryption key: ",d)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if d is not None:<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public_key = (e, n)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>private_key = (d, n)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return public_key, private_key<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>return None<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">def rsa_sign(message,
+private_key):<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>d, n = private_key<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>signature = pow(message, d, n)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>return signature<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">def rsa_verify(signature,
+message, public_key):<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>e, n = public_key<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>decrypted_signature = pow(signature, e, n)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>return decrypted_signature == message<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">public_key, private_key =
+generate_keypair()<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">message = 19070<span style="mso-spacerun: yes;">&nbsp; </span><o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">signature =
+rsa_sign(message, private_key)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">print("Signature:",
+signature)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">verified =
+rsa_verify(signature, message, public_key)<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">if verified:<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print("Signature verified
+successfully!")<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">else:<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>print("Signature verification
+failed!")<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 16.0pt;">Practical 5<o:p></o:p></span></b></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 16.0pt;"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 12.0pt;">Diffie Hellman:<o:p></o:p></span></b></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">import java.util.Scanner;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">public class DiffieH {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public static void main(String[] args) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Scanner sc = new Scanner(System.in);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int p,q,a,b;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Enter public key:
+");<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>p=sc.nextInt();<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Enter G: ");<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>q=sc.nextInt();<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Enter private key1:
+");<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>a=sc.nextInt();<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Enter private key2:
+");<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>b=sc.nextInt();<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>double x=(Math.pow(q,a))%p;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("User1 public key: "+x);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>double y=(Math.pow(q,b))%p;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("User2 public key:
+"+y);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>double s1=(Math.pow(y, a)%p);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>double s2=(Math.pow(x, b)%p);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(s1==s2) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Shared
+Secret key is: "+s1);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>sc.close();<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;">}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing"><b><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing"><span style="font-size: 12.0pt;"><o:p>&nbsp;</o:p></span></p><br /><p></p>
