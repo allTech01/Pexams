@@ -1,445 +1,442 @@
-<p>&nbsp;</p><p align="center" class="MsoNormal" style="text-align: center;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">Stqa<o:p></o:p></span></p>
+<p>&nbsp;</p><p align="center" class="MsoNormal" style="text-align: center;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">Stqa<o:p></o:p></span></p>
 
-<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 14.0pt; line-height: 107%;">Prac4:<o:p></o:p></span></b></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 14pt; line-height: 107%;">Prac4:<o:p></o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">public class prac04 {<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">public class prac04 {<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
 static void main(String[] args) {<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>WebDriver
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>WebDriver
 driver;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;"> </span>System.setProperty("webdriver.chrome.driver","C:\\Users\\Shreyash\\eclipse-workspace\\practicals\\driver\\chromedriver.exe");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;"> </span>System.setProperty("webdriver.chrome.driver","C:\\Users\\Shreyash\\eclipse-workspace\\practicals\\driver\\chromedriver.exe");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver=new
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver=new
 ChromeDriver();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.get("https://www.rediff.com/");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.get("https://www.rediff.com/");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.findElement(By.linkText("Sign
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.findElement(By.linkText("Sign
 in")).click();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;"> </span>driver.findElement(By.name("login")).sendKeys("shreyash.mangesh");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;"> </span>driver.findElement(By.name("login")).sendKeys("shreyash.mangesh");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;"> </span>driver.findElement(By.id("password")).sendKeys("Shreyu@1303");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;"> </span>driver.findElement(By.id("password")).sendKeys("Shreyu@1303");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.findElement(By.name("proceed")).click();<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.findElement(By.name("proceed")).click();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println(driver.getTitle());<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println(driver.getTitle());<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">Prac5:<o:p></o:p></span></b></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">Prac5:<o:p></o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import java.io.FileInputStream;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import java.io.FileInputStream;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import java.io.FileOutputStream;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import java.io.FileOutputStream;<o:p></o:p></span></p>
 
-<p class="MsoNormal" style="tab-stops: 204.0pt;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import
+<p class="MsoNormal" style="tab-stops: 204.0pt;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
 java.io.IOException;<span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
 org.apache.poi.xssf.usermodel.XSSFRow;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
 org.apache.poi.xssf.usermodel.XSSFSheet;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import org.apache.poi.xssf.usermodel.XSSFWorkbook;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.apache.poi.xssf.usermodel.XSSFWorkbook;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">public class prac05 {<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">public class prac05 {<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
 static void main(String[] args) throws IOException<span style="mso-spacerun: yes;">&nbsp; </span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>FileInputStream
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>FileInputStream
 fis= new FileInputStream("D:\\stqa\\Test.xlsx");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFWorkbook
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFWorkbook
 workbook= new XSSFWorkbook(fis);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFSheet
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFSheet
 sheet = workbook.getSheet("Testdata");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFRow
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFRow
 row = sheet.getRow(0);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
 j=0;j&lt;4;j++) {<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println(row.getCell(j).getStringCellValue());<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println(row.getCell(j).getStringCellValue());<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println();<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
 i=1;i&lt;11;i++)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 5;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFRow
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 5;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFRow
 row1=sheet.getRow(i);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 6;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 6;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
 j=0;j&lt;4; j++)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 6;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 6;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 7;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(j==3)<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 7;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(j==3)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 7;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.print(row1.getCell(j).getNumericCellValue());<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 7;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.print(row1.getCell(j).getNumericCellValue());<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 7;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 7;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 7;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.print(row1.getCell(j).getStringCellValue());<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 7;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.print(row1.getCell(j).getStringCellValue());<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 7;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 7;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 6;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println();<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 6;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>FileOutputStream
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>FileOutputStream
 fos=new FileOutputStream("D:\\\\stqa\\\\TestWrite1.xlsx");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>workbook.write(fos);<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>workbook.write(fos);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">Prac6:<o:p></o:p></span></b></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">Prac6:<o:p></o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import java.io.FileInputStream;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import java.io.FileInputStream;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import java.io.IOException;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import java.io.IOException;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
 org.apache.poi.xssf.usermodel.XSSFCell;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
 org.apache.poi.xssf.usermodel.XSSFRow;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import org.apache.poi.xssf.usermodel.XSSFSheet;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.apache.poi.xssf.usermodel.XSSFSheet;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
 org.apache.poi.xssf.usermodel.XSSFWorkbook;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">public class prac06 {<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">public class prac06 {<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
 static void main(String[] args)throws IOException {<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>FileInputStream
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>FileInputStream
 fis=new FileInputStream("D:\\\\stqa\\\\Test.xlsx");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFWorkbook
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFWorkbook
 workbook=new XSSFWorkbook(fis);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFSheet
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFSheet
 sheet=workbook.getSheet("Testdata");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFRow
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFRow
 row=sheet.getRow(0);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
 j=0;j&lt;4;j++)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.print(row.getCell(j).getStringCellValue());<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.print(row.getCell(j).getStringCellValue());<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println();<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
 i=1;i&lt;11;i++)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFRow
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFRow
 row1=sheet.getRow(i);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFCell
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFCell
 cell=row1.getCell(3);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>double
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>double
 marks = cell.getNumericCellValue();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(marks&gt;60)<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(marks&gt;60)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
 j=0;j&lt;3;j++)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println(row1.getCell(j).getStringCellValue());<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println(row1.getCell(j).getStringCellValue());<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 6;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 6;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println();<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">Prac7:
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">Prac7:
 <o:p></o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import java.util.List;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import java.util.List;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import org.openqa.selenium.By;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.By;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import org.openqa.selenium.WebDriver;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.WebDriver;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import org.openqa.selenium.WebElement;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.WebElement;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
 org.openqa.selenium.chrome.ChromeDriver;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">public class prac07 {<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">public class prac07 {<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
 static void main(String[] args) {<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>WebDriver
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>WebDriver
 driver;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;"> </span>System.setProperty("webdruver.chrome.driver","C:\\Users\\Shreyash\\eclipse-workspace\\practicals\\driver\\chromedriver.exe");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;"> </span>System.setProperty("webdriver.chrome.driver","C:\\Users\\Shreyash\\eclipse-workspace\\practicals\\driver\\chromedriver.exe");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver=new
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver=new
 ChromeDriver();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.get("https://demo.guru99.com/selenium/newtours/");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.get("https://demo.guru99.com/selenium/newtours/");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>List&lt;WebElement&gt;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>List&lt;WebElement&gt;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ls=driver.findElements(By.tagName("a"));<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ls=driver.findElements(By.tagName("a"));<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int
 sz=ls.size();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Total
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Total
 no of links are:"+sz);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
 i=0;i&lt;sz;i++) {<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println(ls.get(i).getText());<span style="mso-tab-count: 1;"> </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println(ls.get(i).getText());<span style="mso-tab-count: 1;"> </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">Prac8:<o:p></o:p></span></b></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">Prac8:<o:p></o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import java.util.List;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import java.util.List;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import org.openqa.selenium.By;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.By;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import org.openqa.selenium.WebDriver;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.WebDriver;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import org.openqa.selenium.WebElement;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.WebElement;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
 org.openqa.selenium.chrome.ChromeDriver;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import org.openqa.selenium.support.ui.Select;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.support.ui.Select;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">public class prac08 {<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">public class prac08 {<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
 static void main(String[] args) {<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>WebDriver
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>WebDriver
 driver;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;"> </span>System.setProperty("webdriver.chrome.driver","C:\\Users\\Shreyash\\eclipse-workspace\\practicals\\driver\\chromedriver.exe");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;"> </span>System.setProperty("webdriver.chrome.driver","C:\\Users\\Shreyash\\eclipse-workspace\\practicals\\driver\\chromedriver.exe");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver=new
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver=new
 ChromeDriver();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.get("https://demo.guru99.com/selenium/newtours/");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.get("https://demo.guru99.com/selenium/newtours/");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.findElement(By.linkText("Flights")).click();<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.findElement(By.linkText("Flights")).click();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Select
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Select
 city =new Select(driver.findElement(By.name("fromPort")));<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>List&lt;WebElement&gt;
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>List&lt;WebElement&gt;
 a=city.getOptions();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
 i=0;i&lt;a.size();i++)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println(a.get(i).getText());<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println(a.get(i).getText());<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">Prac9:<o:p></o:p></span></b></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">Prac9:<o:p></o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import java.util.List;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import java.util.List;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import org.openqa.selenium.By;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.By;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import org.openqa.selenium.WebDriver;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.WebDriver;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import org.openqa.selenium.WebElement;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.WebElement;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
 org.openqa.selenium.chrome.ChromeDriver;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">public class prac09 {<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">public class prac09 {<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
 static void main(String[] args) {<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>WebDriver
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>WebDriver
 driver;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;"> </span>System.setProperty("webdriver.chrome.driver","C:\\Users\\Shreyash\\eclipse-workspace\\Shreyashprac\\driver\\chromedriver.exe");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;"> </span>System.setProperty("webdriver.chrome.driver","C:\\Users\\Shreyash\\eclipse-workspace\\Shreyashprac\\driver\\chromedriver.exe");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver=new
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver=new
 ChromeDriver();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.get("https://www.techlistic.com/p/selenium-practice-form.html");<span style="mso-tab-count: 1;"> </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.get("https://www.techlistic.com/p/selenium-practice-form.html");<span style="mso-tab-count: 1;"> </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.findElement(By.id("profession-0")).click();<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.findElement(By.id("profession-0")).click();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.findElement(By.id("profession-1")).click();<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.findElement(By.id("profession-1")).click();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>List&lt;WebElement&gt;
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>List&lt;WebElement&gt;
 elements=driver.findElements(By.xpath("//input[@type'checkbox']"));<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int
 checked=0,unchecked=0;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
 i=0;i&lt;elements.size();i++)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(elements.get(i).isSelected()==true)<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(elements.get(i).isSelected()==true)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 5;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>checked++;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 5;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>checked++;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>unchecked++;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>unchecked++;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("The
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("The
 number of checkboxes checked are"+checked);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("The
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("The
 number of checkboxes unchecked are"+unchecked);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><b><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">Prac10<o:p></o:p></span></b></p>
+<p class="MsoNormal"><b><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">Prac10<o:p></o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><u><b>Beanshell code </b></u><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><u><b>Beanshell code </b></u><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">String
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">String
 result=prev.getResponseDataAsString();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">if (result.contains("Login
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">if (result.contains("Login
 Succesfully"))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">{<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>failure=false;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>failure=false;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>log.info("pass");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>log.info("pass");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">else<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">else<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">{<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>failure=true;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>failure=true;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>log.info("fail");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>log.info("fail");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
-
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><br /></span></p><p class="MsoNormal"><span style="font-family: Times New Roman, serif;"><span style="font-size: 21.3333px;">optional</span></span></p><p class="MsoNormal"><span style="font-family: Times New Roman, serif;"><span style="font-size: 21.3333px;">System.setProperty("webdriver.chrome.driver","C:\\Users\\ps976\\eclipse-workspace\\STQA\\Driver\\chromedriver.exe");</span></span></p><p class="MsoNormal"><span style="font-family: Times New Roman, serif;"><span style="font-size: 21.3333px;">ChromeOptions options = new ChromeOptions();</span></span></p><p class="MsoNormal"></p><p class="MsoNormal"><span style="font-family: Times New Roman, serif;"><span style="font-size: 21.3333px;">options.setBinary("C:\\Users\\ps976\\OneDrive\\Desktop\\STQA\\chrome-win64\\chrome.exe");</span></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><br /></span></p><p class="MsoNormal"><span style="font-family: Times New Roman, serif;"><span style="font-size: 21.3333px;"><b>optional</b></span></span></p><p class="MsoNormal"><span style="font-family: Times New Roman, serif;"><span style="font-size: 21.3333px;">System.setProperty("webdriver.chrome.driver","C:\\Users\\ps976\\eclipse-workspace\\STQA\\Driver\\chromedriver.exe");</span></span></p><p class="MsoNormal"><span style="font-family: Times New Roman, serif;"><span style="font-size: 21.3333px;">ChromeOptions options = new ChromeOptions();</span></span></p><p class="MsoNormal"><span style="font-family: Times New Roman, serif;"><span style="font-size: 21.3333px;">options.setBinary("C:\\Users\\ps976\\OneDrive\\Desktop\\STQA\\chrome-win64\\chrome.exe");</span></span></p><p class="MsoNormal"><span style="font-family: Times New Roman, serif;"><span style="font-size: 21.3333px;">WebDriver driver = new ChromeDriver(options);</span></span></p>
