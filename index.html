@@ -1,442 +1,805 @@
-<p>&nbsp;</p><p align="center" class="MsoNormal" style="text-align: center;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">Stqa<o:p></o:p></span></p>
+<p>&nbsp;</p><p align="center" class="MsoNormal" style="text-align: center;"><b style="mso-bidi-font-weight: normal;"><u><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">Gp Codes<o:p></o:p></span></u></b></p>
 
-<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 14pt; line-height: 107%;">Prac4:<o:p></o:p></span></b></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">Prac1:
+Direct x(visual studio installer)<o:p></o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">public class prac04 {<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using Microsoft.DirectX.Direct3D;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
-static void main(String[] args) {<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using System;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>WebDriver
-driver;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using System.Collections.Generic;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;"> </span>System.setProperty("webdriver.chrome.driver","C:\\Users\\Shreyash\\eclipse-workspace\\practicals\\driver\\chromedriver.exe");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using System.ComponentModel;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver=new
-ChromeDriver();<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using System.Data;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.get("https://www.rediff.com/");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using System.Drawing;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.findElement(By.linkText("Sign
-in")).click();<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using System.Text;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;"> </span>driver.findElement(By.name("login")).sendKeys("shreyash.mangesh");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using System.Windows.Forms;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;"> </span>driver.findElement(By.id("password")).sendKeys("Shreyu@1303");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.findElement(By.name("proceed")).click();<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">namespace pract1<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println(driver.getTitle());<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>public partial class Form1 : Form<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Microsoft.DirectX.Direct3D.Device device;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Microsoft.DirectX.Direct3D.Texture texture;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Microsoft.DirectX.Direct3D .Font font;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>public Form1()<o:p></o:p></span></p>
 
-<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">Prac5:<o:p></o:p></span></b></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import java.io.FileInputStream;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>InitializeComponent();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import java.io.FileOutputStream;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>InitializeDevice();<o:p></o:p></span></p>
 
-<p class="MsoNormal" style="tab-stops: 204.0pt;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
-java.io.IOException;<span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>LoadTexture();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
-org.apache.poi.xssf.usermodel.XSSFRow;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun: yes;">&nbsp;&nbsp;</span>LoadFont();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
-org.apache.poi.xssf.usermodel.XSSFSheet;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.apache.poi.xssf.usermodel.XSSFWorkbook;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>public void InitializeDevice()<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>{<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">public class prac05 {<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>PresentParameters presentParameters = new PresentParameters();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>presentParameters.Windowed = true;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
-static void main(String[] args) throws IOException<span style="mso-spacerun: yes;">&nbsp; </span>{<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>presentParameters.SwapEffect = SwapEffect.Discard;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>FileInputStream
-fis= new FileInputStream("D:\\stqa\\Test.xlsx");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>device = new Device(0, DeviceType.Hardware, this, CreateFlags.HardwareVertexProcessing,
+presentParameters);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFWorkbook
-workbook= new XSSFWorkbook(fis);<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFSheet
-sheet = workbook.getSheet("Testdata");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>public void Render()<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFRow
-row = sheet.getRow(0);<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>device.Clear(ClearFlags.Target, Color.Aqua, 0, 1);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
-j=0;j&lt;4;j++) {<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;</span><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>device.BeginScene();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println(row.getCell(j).getStringCellValue());<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>using(Sprite sprite=new Sprite(device)) {<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println();<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>sprite.Begin(SpriteFlags.AlphaBlend);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>sprite.Draw2D(texture, new
+Rectangle(0, 0, 0, 0), new Rectangle(0, 0, device.Viewport.Width,
+device.Viewport.Height), new Point(0, 0),0f, new Point(0, 0),
+Color.BlueViolet);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
-i=1;i&lt;11;i++)<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>font.DrawText(sprite,
+"helllo", new Point(0, 0), Color.Chocolate);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>sprite.End();<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 5;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFRow
-row1=sheet.getRow(i);<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 6;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
-j=0;j&lt;4; j++)<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>device.EndScene();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 6;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>device.Present();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 7;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(j==3)<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>public void LoadTexture()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>texture = TextureLoader.FromFile(device, "C:\\xampp\\htdocs\\book
+store website\\project\\images\\arundhati roy.jpg", 400, 500, 1,
+Usage.None, Format.A16B16G16R16F, Pool.Managed, Filter.Point, Filter.Point,
+Color.Transparent.ToArgb());<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>public void LoadFont()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>System.Drawing.Font f = new System.Drawing.Font("Arial", 16f,
+FontStyle.Italic);<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>font=new Microsoft.DirectX.Direct3D.Font(device, f);<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>private void Form1_Paint(object sender, PaintEventArgs e)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Render();<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">Prac2:
+Basic Game design technique with pygame(pycharm)<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import pygame<br />
+pygame.init()<br />
+screen = pygame.display.set_mode((600,600), pygame.RESIZABLE)<br />
+pygame.display.set_caption("HEHE")<br />
+color = (0, 255, 255)<br />
+screen.fill(color)<br />
+white = (0, 0, 0)<br />
+img = pygame.image.load("D:\\Gp notes\\imgp1.jpg")<br />
+screen.blit(img, (300, 10))<br />
+pygame.draw.line(screen, white, (50, 50), (200, 50), 10)<br />
+pygame.draw.rect(screen, white,(300,300,150,150),10)<br />
+pygame.draw.circle(screen, white, (200,230), 100, 10)<br />
+pygame.draw.polygon(screen, white, [(100, 400), (200, 400), (150, 500)], 10)<br />
+pygame.display.flip()<br />
+running = True<br />
+while running:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>for event in pygame.event.get():<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if event.type ==pygame.QUIT:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>running = False<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">Prac3: Snake Game with pycharm<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import pygame<br />
+import random<br />
+<br />
+pygame.init()<br />
+<br />
+white = (255,255,255)<br />
+yellow = (255,255,102)<br />
+black = (0,0,0)<br />
+red = (213,50,80)<br />
+green = (0,255,0)<br />
+blue = (50,153,213)<br />
+<br />
+<br />
+dis_width = 600<br />
+dis_height = 800<br />
+<br />
+dis = pygame.display.set_mode((dis_width, dis_height))<br />
+pygame.display.set_caption('Snake Game By Edureka')<br />
+<br />
+clock = pygame.time.Clock()<br />
+<br />
+snake_block = 10<br />
+snake_speed = 15<br />
+<br />
+font_style = pygame.font.SysFont("Arial",25)<br />
+score_font = pygame.font.SysFont("Arial",35)<br />
+<br />
+def Your_Score(score):<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>value = score_font.render("Your
+Score:"+str(score), True, yellow)<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>dis.blit(value, [0, 0])<br />
+<br />
+def our_snake(snake_block,snake_List):<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>for x in snake_List:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>pygame.draw.rect(dis,black,[x[0],x[1],snake_block,snake_block])<br />
+<br />
+def message(msg,color):<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>mesg = font_style.render(msg, True,
+color)<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>dis.blit(mesg, [dis_width/6,
+dis_height/3])<br />
+<br />
+def gameLoop():<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>game_over = False<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>game_close = False<br />
+<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>x1 = dis_width/2<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>y1 = dis_height/2<br />
+<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>x1_change = 0<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>y1_change = 0<br />
+<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>snake_List = []<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>Length_of_snake = 1<br />
+<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>foodx = round(random.randrange(0,
+dis_width - snake_block)/10.0)*10.0<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>foody = round(random.randrange(0,
+dis_height-snake_block)/10.0)*10.0<br />
+<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>while not game_over:<br />
+<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>while game_close == True:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>dis.fill(blue)<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>message("You lost!Press
+C-play again or Q-Quit",black)<br />
+<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Your_Score(Length_of_snake -
+1)<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>pygame.display.update()<br />
+<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for event in
+pygame.event.get():<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if event.type ==
+pygame.KEYDOWN:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if event.key ==
+pygame.K_q:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>game_over = True<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>game_close =
+False<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if event.key ==
+pygame.K_c:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>gameLoop()<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for event in pygame.event.get():<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if event.type == pygame.QUIT:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>game_over = True<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if event.type ==
+pygame.KEYDOWN:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if event.key ==
+pygame.K_LEFT:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>x1_change =
+-snake_block<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>y1_change = 0<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>elif event.key == pygame.K_RIGHT:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>x1_change =
+snake_block<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>y1_change = 0<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>elif event.key ==
+pygame.K_UP:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>y1_change =
+-snake_block<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>x1_change = 0<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>elif event.key ==
+pygame.K_DOWN:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>y1_change =
+snake_block<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>x1_change = 0<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if x1 &gt;= dis_width or x1 &lt;
+0 or y1 &gt;= dis_height or y1 &lt; 0:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>game_close = True<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>x1 += x1_change<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>y1 += y1_change<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>dis.fill(blue)<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>pygame.draw.rect(dis, green, [foodx,
+foody, snake_block, snake_block])<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>snake_Head = []<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>snake_Head.append(x1)<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>snake_Head.append(y1)<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>snake_List.append(snake_Head)<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if len(snake_List) &gt;
+Length_of_snake:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>del snake_List[0]<br />
+<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for x in snake_List[:-1]:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if x == snake_Head:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>game_close = True<br />
+<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>our_snake(snake_block,snake_List)<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Your_Score(Length_of_snake-1)<br />
+<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>pygame.display.update()<br />
+<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if x1 == foodx and y1 == foody:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>foodx =
+round(random.randrange(0, dis_width-snake_block)/10.0) * 10.0<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>foody =
+round(random.randrange(0, dis_height-snake_block)/10.0)*10.0<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Length_of_snake += 1<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>clock.tick(snake_speed)<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>pygame.quit()<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>quit()<br />
+gameLoop()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">Prac4:
+Infinite Scrolling Background (pycharm)<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">import math<br />
+import time<br />
+import pygame as py<br />
+py.init()<br />
+clock = py.time.Clock()<br />
+dis_width = 800<br />
+dis_height = 600<br />
+py.display.set_caption("Endless scrolling in pygame")<br />
+screen = py.display.set_mode((dis_width, dis_height))<br />
+bg = py.image.load("D:\\Gp notes\\imgp1.jpg").convert()<br />
+<br />
+tiles = math.ceil(dis_width/bg.get_width())+1<br />
+scroll = 0<br />
+while 1:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>clock.tick(20)<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>i = 0<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>while(i&lt;tiles):<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>screen.blit(bg,(bg.get_width()*i
++ scroll,0))<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>i+=1<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>scroll-=6<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>if abs(scroll) &gt; bg.get_width():<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>scroll=0<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>for event in py.event.get():<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if event.type == py.QUIT:<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>quit()<br />
+<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>py.display.update()<br />
+py.quit()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">Prac5:
+Camera Shake Effect(unity)<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using System.Collections;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using System.Collections.Generic;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using UnityEngine;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">public class camera : MonoBehaviour<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">{<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>public float shakeDuration = 0.5f;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>public float shakeIntensity = 0.7f;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>private Camera mainCamera;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>private Vector3 initialCameraPosition;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>void Start()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>mainCamera = Camera.main;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>initialCameraPosition = mainCamera.transform.position;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>void Update()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>if (shakeDuration &gt; 0)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Vector3 randomOffset = Random.insideUnitSphere * shakeIntensity;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>mainCamera.transform.position = initialCameraPosition + randomOffset;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>shakeDuration -= Time.deltaTime;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>else<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>mainCamera.transform.position = initialCameraPosition;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>public void TriggerCameraShake(float duration, float intensity)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>shakeDuration = duration;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>shakeIntensity = intensity;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">Prac
+6: SnowFall(unity)<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">No code only set world, gravity, dumpen<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">Prac7:
+Roll a Ball(unity)<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using System.Collections;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using System.Collections.Generic;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using UnityEngine;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using UnityEngine.UI;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">public class rollaball : MonoBehaviour<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">{<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>private Rigidbody rb;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>public Text countext;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>public Text wintext;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>public int speed;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>private int count;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>void Start()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>rb = GetComponent&lt;Rigidbody&gt;();<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>count = 0;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>setcount();<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>wintext.text = "";<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>void Update()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>float hor = Input.GetAxis("Horizontal");<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>float ver = Input.GetAxis("Vertical");<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Vector3 movement = new Vector3(hor, 0, ver);<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>rb.AddForce(movement * speed);<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>public void OnTriggerEnter(Collider other)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>if(other.gameObject.CompareTag("pickup"))<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>other.gameObject.SetActive(false);<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>count++;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>setcount();<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 7;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.print(row1.getCell(j).getNumericCellValue());<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 7;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>public void setcount()<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 7;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.print(row1.getCell(j).getStringCellValue());<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 7;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>countext.text = "COUNT:" + count;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 6;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println();<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>if(count&gt;=2)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>FileOutputStream
-fos=new FileOutputStream("D:\\\\stqa\\\\TestWrite1.xlsx");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>wintext.text = "hurray!";<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>workbook.write(fos);<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><u><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 18.0pt; line-height: 107%;">Optional
+code for roll a ball<o:p></o:p></span></u></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;">using
+System.Collections;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;">using
+System.Collections.Generic;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;">using
+UnityEngine;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;">public class
+Player : MonoBehaviour<o:p></o:p></span></p>
 
-<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">Prac6:<o:p></o:p></span></b></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;">{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import java.io.FileInputStream;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>public Rigidbody rb;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import java.io.IOException;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>public float speed = 10;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>// Start is called before the first frame
+update<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
-org.apache.poi.xssf.usermodel.XSSFCell;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>void Start()<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
-org.apache.poi.xssf.usermodel.XSSFRow;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.apache.poi.xssf.usermodel.XSSFSheet;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>rb<span style="mso-spacerun: yes;">&nbsp;
+</span>= GetComponent&lt;Rigidbody&gt;();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
-org.apache.poi.xssf.usermodel.XSSFWorkbook;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">public class prac06 {<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>// Update is called once per frame<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>void FixedUpdate()<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
-static void main(String[] args)throws IOException {<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>float movH =
+Input.GetAxis("Horizontal");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>FileInputStream
-fis=new FileInputStream("D:\\\\stqa\\\\Test.xlsx");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>float movV =
+Input.GetAxis("Vertical");<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFWorkbook
-workbook=new XSSFWorkbook(fis);<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Vector3 move = new Vector3(movH , 0 ,
+movV);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFSheet
-sheet=workbook.getSheet("Testdata");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>rb.AddForce(move*speed);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFRow
-row=sheet.getRow(0);<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
-j=0;j&lt;4;j++)<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>private void OnTriggerEnter(Collider
+other){<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.print(row.getCell(j).getStringCellValue());<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>if(other.gameObject.CompareTag("Pickup"))<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println();<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Destroy(other.gameObject);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
-i=1;i&lt;11;i++)<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%; mso-bidi-font-weight: bold;">}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFRow
-row1=sheet.getRow(i);<o:p></o:p></span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>XSSFCell
-cell=row1.getCell(3);<o:p></o:p></span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>double
-marks = cell.getNumericCellValue();<o:p></o:p></span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">Prac8:
+2d Target Shooting(unity)<o:p></o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(marks&gt;60)<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using System.Collections;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using System.Collections.Generic;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
-j=0;j&lt;3;j++)<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using UnityEngine;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println(row1.getCell(j).getStringCellValue());<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">using UnityEngine.UI;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 6;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">public class tutu : MonoBehaviour<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println();<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>public Text countText;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>public Text winText;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>private int count;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">}<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>void Start()<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>count = 0;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>score();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>winText.text = "";<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">Prac7:
-<o:p></o:p></span></b></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>void Update()<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import java.util.List;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.By;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.WebDriver;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>private void OnMouseDown()<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.WebElement;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
-org.openqa.selenium.chrome.ChromeDriver;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Destroy(gameObject);<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>count = count + 10;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">public class prac07 {<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>score();<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
-static void main(String[] args) {<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>WebDriver
-driver;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>private void score()<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;"> </span>System.setProperty("webdriver.chrome.driver","C:\\Users\\Shreyash\\eclipse-workspace\\practicals\\driver\\chromedriver.exe");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver=new
-ChromeDriver();<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>countText.text = "COUNT" + count;<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.get("https://demo.guru99.com/selenium/newtours/");<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>if (count == 10)<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>List&lt;WebElement&gt;<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>{<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ls=driver.findElements(By.tagName("a"));<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>winText.text = "you win";<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int
-sz=ls.size();<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("Total
-no of links are:"+sz);<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
-i=0;i&lt;sz;i++) {<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;">}<o:p></o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println(ls.get(i).getText());<span style="mso-tab-count: 1;"> </span><o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><br style="mso-special-character: line-break;" />
+<!--[if !supportLineBreakNewLine]--><br style="mso-special-character: line-break;" />
+<!--[endif]--><o:p></o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></b></p>
 
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">}<o:p></o:p></span></p>
-
-<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">Prac8:<o:p></o:p></span></b></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import java.util.List;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.By;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.WebDriver;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.WebElement;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
-org.openqa.selenium.chrome.ChromeDriver;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.support.ui.Select;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">public class prac08 {<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
-static void main(String[] args) {<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>WebDriver
-driver;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;"> </span>System.setProperty("webdriver.chrome.driver","C:\\Users\\Shreyash\\eclipse-workspace\\practicals\\driver\\chromedriver.exe");<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver=new
-ChromeDriver();<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.get("https://demo.guru99.com/selenium/newtours/");<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.findElement(By.linkText("Flights")).click();<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Select
-city =new Select(driver.findElement(By.name("fromPort")));<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>List&lt;WebElement&gt;
-a=city.getOptions();<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
-i=0;i&lt;a.size();i++)<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println(a.get(i).getText());<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">}<o:p></o:p></span></p>
-
-<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">Prac9:<o:p></o:p></span></b></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import java.util.List;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.By;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.WebDriver;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import org.openqa.selenium.WebElement;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">import
-org.openqa.selenium.chrome.ChromeDriver;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">public class prac09 {<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>public
-static void main(String[] args) {<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>WebDriver
-driver;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;"> </span>System.setProperty("webdriver.chrome.driver","C:\\Users\\Shreyash\\eclipse-workspace\\Shreyashprac\\driver\\chromedriver.exe");<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver=new
-ChromeDriver();<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.get("https://www.techlistic.com/p/selenium-practice-form.html");<span style="mso-tab-count: 1;"> </span><o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.findElement(By.id("profession-0")).click();<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>driver.findElement(By.id("profession-1")).click();<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>List&lt;WebElement&gt;
-elements=driver.findElements(By.xpath("//input[@type'checkbox']"));<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int
-checked=0,unchecked=0;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>for(int
-i=0;i&lt;elements.size();i++)<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(elements.get(i).isSelected()==true)<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 5;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>checked++;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 3;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>else<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 4;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>unchecked++;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("The
-number of checkboxes checked are"+checked);<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>System.out.println("The
-number of checkboxes unchecked are"+unchecked);<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">}<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></p>
-
-<p class="MsoNormal"><b><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">Prac10<o:p></o:p></span></b></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><u><b>Beanshell code </b></u><o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">String
-result=prev.getResponseDataAsString();<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">if (result.contains("Login
-Succesfully"))<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">{<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>failure=false;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>log.info("pass");<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">}<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">else<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;">{<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>failure=true;<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>log.info("fail");<o:p></o:p></span></p>
-
-<p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16pt; line-height: 107%;"><br /></span></p><p class="MsoNormal"><span style="font-family: Times New Roman, serif;"><span style="font-size: 21.3333px;"><b>optional</b></span></span></p><p class="MsoNormal"><span style="font-family: Times New Roman, serif;"><span style="font-size: 21.3333px;">System.setProperty("webdriver.chrome.driver","C:\\Users\\ps976\\eclipse-workspace\\STQA\\Driver\\chromedriver.exe");</span></span></p><p class="MsoNormal"><span style="font-family: Times New Roman, serif;"><span style="font-size: 21.3333px;">ChromeOptions options = new ChromeOptions();</span></span></p><p class="MsoNormal"><span style="font-family: Times New Roman, serif;"><span style="font-size: 21.3333px;">options.setBinary("C:\\Users\\ps976\\OneDrive\\Desktop\\STQA\\chrome-win64\\chrome.exe");</span></span></p><p class="MsoNormal"><span style="font-family: Times New Roman, serif;"><span style="font-size: 21.3333px;">WebDriver driver = new ChromeDriver(options);</span></span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,serif; font-size: 16.0pt; line-height: 107%;"><o:p>&nbsp;</o:p></span></b></p>
